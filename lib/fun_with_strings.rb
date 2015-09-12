@@ -1,6 +1,6 @@
 module FunWithStrings
   def palindrome?
-    # your code here
+    # returns true if the input string is a palindrome.
   end
   def count_words
     # your code here
