@@ -18,7 +18,18 @@ module FunWithStrings
     return word_hash
   end
   def anagram_groups
-    # your code here
+    # returns a nested array of anagrams.
+    words = self.downcase.split
+    anagrams_hash = {}
+    words.each do |word|
+      if anagrams_hash.key?(word.chars.sort.join)
+        anagrams_hash[word.chars.sort.join].push(word)
+      else
+        anagrams_hash[word.chars.sort.join] = [word]
+      end
+    end
+    anagrams = anagrams_hash.values
+    return anagrams
   end
 end
 
