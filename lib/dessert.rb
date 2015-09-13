@@ -32,6 +32,20 @@ end
 
 class JellyBean < Dessert
   def initialize(flavor)
-    # your code here
+    @flavor = flavor
+    @name = flavor + " jelly bean"
+    @calories = 5
+  end
+
+  def flavor
+    @flavor
+  end
+
+  def flavor=(flavor)
+    @flavor = flavor
+  end
+
+  def delicious?
+    @flavor != "licorice"
   end
 end
